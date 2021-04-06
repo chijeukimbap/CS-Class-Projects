@@ -443,6 +443,6 @@ int temp2(char answer,int score)																	//Beginning of temp2 function
 
 
 //Programmed by:
-//©Adzhar Musa
+//Â©Adzhar Musa
 //for CS200-B
 //2015-All Rights Reserved
