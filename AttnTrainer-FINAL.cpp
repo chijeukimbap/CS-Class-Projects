@@ -1,9 +1,8 @@
 //Adzhar A. Musa
-//Renzo Jumangit
 //CS200-B
 //FINAL PROJECT
 //March 22,2015
-#include<iostream>															//Library Declarations
+#include<iostream>		//Library Declarations
 #include<time.h>
 #include<conio.h>
 #include<stdlib.h>
@@ -11,10 +10,10 @@
 
 using namespace std;
 
-int temp(char answer,int score);											//Function Declarations
+int temp(char answer,int score);	//Function Declarations
 int temp2(char answer,int score);
 
-void main()																	//Beginning of Main Function
+void main()							
 {
 	
 	int counter,score=0,Highscore=0,colors=0;
@@ -23,7 +22,7 @@ void main()																	//Beginning of Main Function
 	
 	do
 	{
-	cout<<"\t\tMIND FLEXIBILITY AND ATTENTION TRAINER"<<endl<<endl;						//Title and Instructions to user
+	cout<<"\t\tMIND FLEXIBILITY AND ATTENTION TRAINER"<<endl<<endl;				//Title and Instructions to user
 	cout<<"Instructions: This is a trainer based on popular attention "
 		"tests over\nthe Internet.This trainer was designed to improve "
 		"the flexibility and\nthe attention of the user's mind."<<endl
@@ -35,18 +34,18 @@ void main()																	//Beginning of Main Function
 		<<"If it doesn't follow the conditions."<<endl<<endl
 		<<"Good Luck and Have Fun!"<<endl<<endl;
 		
-	srand(time(NULL));																//Initialization of random number generator
-	cout<<"Ready?"<<endl;															//User prompt to get ready
+	srand(time(NULL));					//Initialization of random number generator
+	cout<<"Ready?"<<endl;					//User prompt to get ready
 	system("pause");
-	clock_t begin = clock();														//Beginning of time recording
+	clock_t begin = clock();				//Beginning of time recording
 	system("cls");
-		for(counter=0;counter<50;counter++)											//Test Iteration of 50rounds
+		for(counter=0;counter<50;counter++)		//Test Iteration of 50rounds
 	{ 	
 		colors=(rand()%24+1);
 	
 
-																					//Color Combinations
-																					//Random number is then passed to switch to output corresponding test combination
+								//Color Combinations
+								//Random number is then passed to switch to output corresponding test combination
 		switch(colors)
 		{
 		//**************RED********************//
@@ -258,7 +257,7 @@ void main()																	//Beginning of Main Function
 			cout<<endl;
 			break;
 
-		//**************GREEN********************//													//More cases
+		//**************GREEN********************//			//More cases
 
 		case 17://GREEN red(correct)
 			system("color 24");
@@ -366,10 +365,10 @@ void main()																	//Beginning of Main Function
 			break;
 		}
 			
-	system("cls");													//Screen is cleared to give way to each test page;
+	system("cls");				//Screen is cleared to give way to each test page;
 	}
-	clock_t end = clock();											//End of time recording
-	score=score*100;												//Calculation of Scores
+	clock_t end = clock();			//End of time recording
+	score=score*100;			//Calculation of Scores
 	accuracy=score/50;
 	system("cls");													
 	system("color 07");
@@ -378,10 +377,10 @@ void main()																	//Beginning of Main Function
 	cout<<"******************************GAME OVER*****************************************"<<endl;	//Results Page
 	cout<<"Well done!"<<endl;
 	cout<<"Accuracy: "<<accuracy<<"%"<<endl;
-	double elapsedtime = double(end - begin) / CLOCKS_PER_SEC;										//Elapsed Time Calculation
+	double elapsedtime = double(end - begin) / CLOCKS_PER_SEC;			//Elapsed Time Calculation
 	cout<<"Time Completed: "<<elapsedtime<<" "<<"seconds"<<endl<<endl;
-	Highscore=10000*((accuracy)-((2*50)-elapsedtime));												//High Score Calculation
-	cout<<"Want to try again?"<<endl;																//Prompt to user if they want to try again
+	Highscore=10000*((accuracy)-((2*50)-elapsedtime));				//High Score Calculation
+	cout<<"Want to try again?"<<endl;						//Prompt to user if they want to try again
 	cout<<"High Score: "<<endl<<Highscore<<endl<<endl;
 	cout<<"Press<y/n>"<<endl;
 	cin>>retry;																						//Enter reply to prompt
@@ -391,13 +390,13 @@ void main()																	//Beginning of Main Function
 		score=0;
 	}
 														
-}while(retry=='y'||retry=='Y');																		//While the user is still indulged in the game, the game is being reset.
+}while(retry=='y'||retry=='Y');				//While the user is still indulged in the game, the game is being reset.
 	
 }
 
 																									//End of Main Function
 																									//Functions were made in order to isolate the scoring system to avoid error and confusion
-int temp(char answer,int score)																		//Beginning of temp function
+int temp(char answer,int score)				//Beginning of temp function
 																									//Score Increment answer is yes
 {
 	
@@ -414,7 +413,7 @@ int temp(char answer,int score)																		//Beginning of temp function
 	return score;
 }																									//End of temp function
 
-int temp2(char answer,int score)																	//Beginning of temp2 function
+int temp2(char answer,int score)			//Beginning of temp2 function
 {
 																									//Score Increment if No is Correct
 	if(answer=='n')
